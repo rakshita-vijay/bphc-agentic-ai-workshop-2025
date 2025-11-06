@@ -340,11 +340,13 @@ def gen_article():
   print("\nPreparing setup... ")
   resp = crewww.kickoff(inputs={"topic": topik})
 
-  print("\nPrinting the topics collected: \n")
+  print("\nPrinting the article: \n")
   # If you want to display markdown in a notebook, use display(Markdown(resp.raw.strip("`")))
   # For a .py script, just print the result:
   if resp:
-    print(resp)  # or print(resp) if .raw is not available
+    # print(resp)  # or print(resp) if .raw is not available
+    print((resp.strip('```')).strip('markdown'))  # or print(resp) if .raw is not available
+    # (res.raw.strip('```')).strip('markdown')
   else:
     print("No data received from the LLM. Nothing to write.")
 
@@ -363,12 +365,12 @@ def gen_article():
   fw = os.path.join(downloads_folder, file_writer)
 
   f = open(fw, 'w')
-  hyphens = "-" * len(f"# Topic: {topik}")
-  f.write(f"# Topic: {topik} \n\n{hyphens}\n\n")
+  hyphens = "-" * len(f"# Theme: {theam}")
+  f.write(f"# Theme: {theam} \n\n{hyphens}\n\n")
   f.close()
 
   f = open(fw, 'a')
-  f.write(resp.raw)
+  f.write(resp.raw.strip('```')).strip('markdown')
   f.close()
 
   print("\nDownload complete! Check your downloads folder, and happy writing! :)")
