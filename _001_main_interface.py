@@ -1,6 +1,6 @@
 import os, sys, math, re, csv, pypdf, datetime, shutil
 
-from _101_download_to_device import download_file, delete_pychache
+from _101_download_to_device import download_file, delete_pycache
 
 # from crewai_toolkits_gem_2point0_flash._002_article_summarizer import gen_summary
 
@@ -45,7 +45,7 @@ def main():
 
   # Exit
   elif purpose_of_visit == 3:
-    delete_pychache()
+    delete_pycache()
     print("Exiting...")
     sys.exit(1)
 
@@ -60,9 +60,10 @@ def main():
 
   if c_or_e == 'y':
     print(l_only_line_demarcator)
+    delete_pycache()
     main()
   else:
-    delete_pychache()
+    delete_pycache()
     print("\nExiting...")
     sys.exit(1)
 

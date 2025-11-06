@@ -1,0 +1,7 @@
+crewai
+google-generativeai
+fpdf
+pypdf
+zipfile
+pysqlite3-binary
+gitpython

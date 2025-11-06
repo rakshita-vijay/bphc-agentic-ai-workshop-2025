@@ -5,13 +5,14 @@ import datetime
 import re
 import shutil
 
-def delete_pychache():
+def delete_pycache():
   for root, dirs, files in os.walk(os.getcwd()):
     for dir_name in dirs:
       if dir_name == "__pycache__":
         pycache_path = os.path.join(root, dir_name)
         try:
           shutil.rmtree(pycache_path)
+          # print(f"Deleted: {pycache_path}")
         except Exception as e:
           print(f"Error deleting {pycache_path}: {e}")
 
