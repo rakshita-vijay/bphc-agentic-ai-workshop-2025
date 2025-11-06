@@ -5,7 +5,7 @@ from _101_download_to_device import download_file, delete_pychache
 # from crewai_toolkits_gem_2point0_flash._002_article_summarizer import gen_summary
 
 from _002_article_summarizer import gen_summary
-# from _003_article_generator import gen_article
+from _003_article_generator import gen_article
 
 l_only_line_demarcator = "\n{}".format("~" * 120)
 r_only_line_demarcator = "{}\n".format("~" * 120)
@@ -63,7 +63,7 @@ def main():
     main()
   else:
     delete_pychache()
-    print("Exiting...")
+    print("\nExiting...")
     sys.exit(1)
 
 if __name__ == "__main__":

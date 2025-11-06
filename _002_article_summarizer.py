@@ -46,8 +46,6 @@ def gen_summary():
     api_key=GOOGLE_API_KEY
   )
 
-  from random import randint
-
   # To get the theme of the topics to be decided
   # theam = input("Enter the theme: ")
 
@@ -55,6 +53,7 @@ def gen_summary():
   if not theam:
     theam = input("Enter the theme: ")
 
+  from random import randint
   numberOfTopics = randint(5, 9)
 
   print()
