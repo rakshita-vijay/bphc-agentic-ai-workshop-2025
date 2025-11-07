@@ -314,8 +314,7 @@ def gen_summary():
   # If you want to display markdown in a notebook, use display(Markdown(resp.raw.strip("`")))
   # For a .py script, just print the result:
   if resp:
-    # print(resp)  # or print(resp) if .raw is not available
-    print((resp.strip('```')).strip('markdown'))  # or print(resp) if .raw is not available
+    print(resp)  # or print(resp) if .raw is not available
     # (res.raw.strip('```')).strip('markdown')
   else:
     print("No data received from the LLM. Nothing to write.")
